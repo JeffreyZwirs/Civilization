@@ -1,0 +1,21 @@
+﻿@model Civilization.Models.Questions
+
+@{
+    ViewBag.Title = "Edit Question";
+}
+
+<h2>Edit Question</h2>
+<br />
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true);
+    <div>
+        <div class="editor-field">
+            @Html.TextAreaFor(q => q.text, new { id = "questionform", autofocus = "true", required = "true" })
+            @Html.ValidationMessageFor(q => q.text)
+        </div>
+        <input id="askbutton" type="submit" value="Edit question" /> | @Html.ActionLink("Back", "Overview")
+    </div>
+}
+
+

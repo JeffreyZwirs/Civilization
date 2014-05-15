@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/cssreset.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/main.css")" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="menu">
+		<div id="menucontainer">
+			<div id="logo"><p>@Html.ActionLink("CIVILIZATION", "Index")</p></div>
+
+			<div id="links">
+			@Html.ActionLink("Create", "SessionCreate")
+			@Html.ActionLink("Overview", "Overview")
+			</div>
+			
+		</div>
+	</div>
+<div id="contentcontainer">
+@RenderBody()
+</div>
+
+
+</body>
+</html>

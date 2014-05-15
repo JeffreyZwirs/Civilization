@@ -1,0 +1,18 @@
+﻿@model Civilization.Models.Questions
+
+@{
+    ViewBag.Title = "Your Answer - Civilization";
+}
+
+<h1>@Model.Question</h1>
+<p>Your session is: @Model.code</p>
+<br />
+@using (Html.BeginForm())
+{
+    <div>
+        <div class="editor-field">
+            @Html.TextAreaFor(m => m.Answer, new { id = "questionform" , placeholder = "Write your answer here." , autofocus = "true" , required = "true"})    
+            <input id="askbutton" type="submit" value="Send answer" /> | @Html.ActionLink("Back", "Index")
+        </div>
+    </div>                                                               
+}

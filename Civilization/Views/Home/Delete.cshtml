@@ -1,0 +1,15 @@
+﻿@model Civilization.Models.Questions
+
+@{
+    ViewBag.Title = "Delete Question";
+}
+<h2>Delete Confirmation</h2>
+<br /> 
+<p>Are you sure you want to delete this question?</p>
+<br />
+@using (Html.BeginForm())
+{ 
+    <p> 
+           <input id="askbutton" type="submit" value="Delete question" /> | @Html.ActionLink("Back", "Overview")
+    </p> 
+}

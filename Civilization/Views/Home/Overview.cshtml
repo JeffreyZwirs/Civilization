@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Civilization.Models.Questions>
+
+@{
+    ViewBag.Title = "Overview";
+}
+
+<h1>All available questions</h1>
+
+<ul>
+    @foreach (var Sessions in Model)
+    {
+        <li>
+            @Html.ActionLink("Delete", "Delete", new { id = Sessions.QuestionID }) | @Html.ActionLink(String.Format("{0} via {1}", Sessions.Question, Sessions.code), "Sessions", new { code = Sessions.code })
+        </li>       
+    }
+</ul>
+<br />
+@Html.ActionLink("Back", "Index")
